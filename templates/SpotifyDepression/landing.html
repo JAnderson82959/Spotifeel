@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spotifeel</title>
+    <style>
+    p {
+        font-family: Courier
+    }
+    h1 {
+        font-family: Courier
+    }
+    </style>
+</head>
+<body>
+    {% if spt_url %}
+        <button onClick="location.href = '{{spt_url}}'">Connect to Spotify</button>
+        <p>{{headers}}</p>
+    {% else %}
+        <p>error</p>
+    {% endif %}
+</body>
+</html>

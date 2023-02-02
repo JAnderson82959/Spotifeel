@@ -4,15 +4,9 @@ from django.template import loader
 from django.http import HttpResponseRedirect
 import spotipy
 
-#: first get a page that logs the user into spotify, then one that displays depression stuff
-SPOTIPY_REDIRECT_URI ='http://127.0.0.1:8000/DepressionAnalysis/'
-SPOTIPY_CLIENT_ID = "c9e41068300d41339499c6e8e1201c70"
-SPORIPY_CLIENT_SECRET = "45c23a59b4d74eb69322ccfc98aef5a7"
-
-#new structure: base "/" page checks if redir w/ token, 
-#else if has token, generates analysis, 
-#saves it to session and redirs to results display page,
-#else displays page with spotify login link
+SPOTIPY_REDIRECT_URI ="xxx"
+SPOTIPY_CLIENT_ID = "xxx"
+SPORIPY_CLIENT_SECRET = "xxx"
 
 def index(request):
     cache_handle = spotipy.cache_handler.DjangoSessionCacheHandler(request)
